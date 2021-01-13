@@ -25,7 +25,7 @@ currently available on [bioRxiv][biorxiv_link].
 4.  In that notebook, do the following after your standard imports:
     ```{python}
     import os, sys
-    sys.path.append(f"{os.getcwd()/../code/plotting")
+    sys.path.append(f"{os.getcwd()}/../code/plotting")
     from plot_settings import *
     from palettes import *
     from scatter import *
