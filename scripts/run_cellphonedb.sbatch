@@ -15,13 +15,11 @@
 ### SLURM HEADER
 usage=$(cat <<EOF
 Run with:
-  sbatch scripts/run_cellphonedb.sbatch <input_file_prefix> <output_subdir>
+  sbatch scripts/run_cellphonedb.sbatch <input_file_prefix>
 
 Expects input data to be in a '\${SLURM_SUBMIT_DIR}/analysis/cellphone' and of the form
   '<prefix>_metadata.txt'
   '<prefix>_counts.txt'
-and will save data in
-  '\${SLURM_SUBMIT_DIR}/analysis/cellphonedb/<output_subdir>'
 EOF)
 
 localcores=${SLURM_CPUS_ON_NODE}
@@ -29,14 +27,9 @@ localcores=${SLURM_CPUS_ON_NODE}
 cd ${SLURM_SUBMIT_DIR}/analysis/cellphone
 
 file_prefix=${1}
-out_dir=${2}
+out_dir="${file_prefix}-output"
 if [[ -z ${file_prefix} ]]; then
     echo "Need to specify an file_prefix" >&2
-    echo $usage >&2
-    exit 2
-fi
-if [[ -z ${out_dir} ]]; then
-    echo "Need to specify an outdir" >&2
     echo $usage >&2
     exit 2
 fi

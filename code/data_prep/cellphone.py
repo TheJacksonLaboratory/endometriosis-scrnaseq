@@ -51,12 +51,14 @@ def export_for_cellphonedb(
 
         metadata_path = outdir / f"{partition_prefix}{partition_id}_metadata.txt"
         counts_path = outdir / f"{partition_prefix}{partition_id}_counts.txt"
+        output = outdir / f"{partition_prefix}{partition_id}-output"
 
         metadata.to_csv(metadata_path, sep="\t")
         expr_matrix.to_csv(counts_path, sep="\t")
+        output.mkdir(exist_ok=True)
 
 
-def load_cellphone_db_results(
+def load_cellphonedb_results(
     adata: sc.AnnData,
     results_dir: Union[str, Path],
     *,
@@ -73,7 +75,7 @@ def load_cellphone_db_results(
     partitions = adata.obs[partition_key].unique()
 
     results = []
-    for subdir in results_dir.glob("*"):
+    for subdir in results_dir.glob("*-output"):
         if not subdir.is_dir(): continue
         base_name = subdir.stem
         result = curate_ppi_lists(subdir.resolve())
