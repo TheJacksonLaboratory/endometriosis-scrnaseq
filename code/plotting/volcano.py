@@ -33,9 +33,13 @@ def volcano_plot(
     sns.despine(fig, ax)
 
     if label_genes:
-        for df, n_top in zip((reds, blues), (top_neg_genes, top_pos_genes)):
+        for (df, n_top, asc) in zip(
+            (reds, blues),
+            (top_neg_genes, top_pos_genes),
+            (True, False)
+        ):
             gene_labels = []
-            genes = df.sort_values(by="logFC", ascending=False).index[:n_top].tolist()
+            genes = df.sort_values(by="logFC", ascending=asc).index[:n_top].tolist()
             for gene in genes:
                 x, y = dge_list.loc[gene, ["logFC", "nlogp"]]
                 gene_labels.append(ax.text(x, y, gene, fontsize=5, ha="left", zorder=40))
