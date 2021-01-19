@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ..external.adjust_text import adjust_text
+from adjust_text import adjust_text
 
 
 def volcano_plot(input_list, name, volcano_genes=[], lfc=0.99, pv=1e-2, filename=None):
