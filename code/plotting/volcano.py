@@ -7,7 +7,7 @@ from adjust_text import adjust_text
 def volcano_plot(
     input_list, title, lfc=0.99, pv=1e-2, neg_label="", pos_label="",
     label_genes=False, top_neg_genes=10, top_pos_genes=10,
-    filename=None
+    filename=None, adjust_kws={}
 ):
     dge_list = input_list[~input_list.index.str.startswith("mt-")].copy()
     dge_list["nlogp"] = -np.log10(dge_list.FDR)
@@ -44,16 +44,18 @@ def volcano_plot(
                 x, y = dge_list.loc[gene, ["logFC", "nlogp"]]
                 gene_labels.append(ax.text(x, y, gene, fontsize=5, ha="left", zorder=40))
 
+            default_kws = dict(
+                autoalign='xy',
+                expand_points=(2, 2),
+                expand_text=(1.15, 1.15),
+                arrowprops=dict(arrowstyle="-", color='k', lw=0.4)
+            )
+            default_kws.update(adjust_kws)
             adjust_text(
                 gene_labels,
                 x=df.logFC.values,
                 y=df.nlogp.values,
-                ax=ax, autoalign='xy',
-                # force_points=(0.15, 0.15),
-                expand_points=(2, 2),
-                # expand_text=(1.15, 1.15),
-                # force_text=(-0.5, 0.5),
-                arrowprops=dict(arrowstyle="-", color='k', lw=0.4)
+                ax=ax, **default_kws
             )
 
     fig.tight_layout()
