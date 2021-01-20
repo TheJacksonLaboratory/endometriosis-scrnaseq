@@ -20,7 +20,10 @@ Run with:
 Expects input data to be in a '\${SLURM_SUBMIT_DIR}/analysis/cellphone' and of the form
   '<prefix>_metadata.txt'
   '<prefix>_counts.txt'
-EOF)
+EOF
+)
+
+set -euo pipefail
 
 localcores=${SLURM_CPUS_ON_NODE}
 
@@ -32,6 +35,9 @@ if [[ -z ${file_prefix} ]]; then
     echo "Need to specify an file_prefix" >&2
     echo $usage >&2
     exit 2
+else
+    echo "You supplied file prefix: [${file_prefix}]"
+    echo "Will store outputs in: [${out_dir}]"
 fi
 
 # Load cellphonedb env
