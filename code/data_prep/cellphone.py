@@ -44,9 +44,9 @@ def export_for_cellphonedb(
 
         inds = adata.obs_names.isin(df.index)
         expr_matrix = pd.DataFrame(
-            x[inds, :],
-            index=rownames,
-            columns=df.index
+            x[inds, :].T,
+            columns=df.index,
+            index=rownames
         )
 
         metadata_path = outdir / f"{partition_prefix}{partition_id}_metadata.txt"
