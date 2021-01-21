@@ -80,7 +80,7 @@ def load_cellphonedb_results(
         base_name = subdir.stem
         result = curate_ppi_lists(subdir.resolve())
         result["partition_key"] = base_name
-        results.append(base_name)
+        results.append(result)
 
     return pd.concat(results, axis=0)
 
