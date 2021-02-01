@@ -6,7 +6,7 @@ from adjust_text import adjust_text
 
 def volcano_plot(
     input_list, title, lfc=0.99, pv=1e-2, neg_label="", pos_label="",
-    label_genes=False, top_neg_genes=10, top_pos_genes=10,
+    label_genes=False, genes_to_label=[], top_neg_genes=10, top_pos_genes=10,
     filename=None, adjust_kws={}
 ):
     dge_list = input_list[~input_list.index.str.startswith("mt-")].copy()
@@ -39,10 +39,16 @@ def volcano_plot(
             (True, False)
         ):
             gene_labels = []
-            genes = df.sort_values(by="logFC", ascending=asc).index[:n_top].tolist()
-            for gene in genes:
-                x, y = dge_list.loc[gene, ["logFC", "nlogp"]]
-                gene_labels.append(ax.text(x, y, gene, fontsize=5, ha="left", zorder=40))
+            if len(genes_to_label) == 0:
+                genes = df.sort_values(by="logFC", ascending=asc).index[:n_top].tolist()
+                for gene in genes:
+                    x, y = dge_list.loc[gene, ["logFC", "nlogp"]]
+                    gene_labels.append(ax.text(x, y, gene, fontsize=5, ha="left", zorder=40))
+            else:
+                for gene in genes_to_label:
+                    if gene not in df.index: continue
+                    x, y = df.loc[gene, ["logFC", "nlogp"]]
+                    gene_labels.append(ax.text(x, y, gene, fontsize=5, ha="left", zorder=40))
 
             default_kws = dict(
                 autoalign='xy',
