@@ -216,7 +216,7 @@ def chordDiagram(X, ax, colors=None, width=0.1, pad=2, chordwidth=0.7):
             start1, end1 = pos[(i, j)]
             start2, end2 = pos[(j, i)]
             ChordArc(start1, end1, start2, end2,
-                     radius=1. - width, color=colors[i], chordwidth=chordwidth, ax=ax)
+                     radius=1. - width, color=color, chordwidth=chordwidth, ax=ax)
 
     # print(nodePos)
     return nodePos
@@ -235,7 +235,7 @@ def plot_cellphone_chords(ax, cellphone_df, flux=None, palette="tab20"):
 
     if flux.shape[0] != flux.shape[1]:
         raise Exception("This function expects the same number of rows and columns!")
-    if flux.columns != flux.index:
+    if not np.array_equal(flux.columns, flux.index):
         raise Exception("This function expects the same names in the rows and columns!")
 
     ax.set_axis_off()
@@ -250,8 +250,24 @@ def plot_cellphone_chords(ax, cellphone_df, flux=None, palette="tab20"):
 
 def build_flux_mat(df, senders=None, receivers=None, piv_kws={"aggfunc":"size"}):
     flux = df.pivot_table(index="celltype_a", columns="celltype_b", fill_value=0, **piv_kws).astype(int)
+    possible_cts = flux.columns.union(flux.index)
+    missing_cols = possible_cts.difference(flux.columns)
+    missing_rows = possible_cts.difference(flux.index)
+    flux.loc[:, missing_cols] = 0
+    flux.loc[missing_rows, :] = 0
     if senders is not None:
         flux.loc[~flux.index.isin(senders), :] = 0
     if receivers is not None:
         flux.loc[:, ~flux.columns.isin(receivers)] = 0
     return flux
+
+
+if __name__ == "__main__":
+    import pandas as pd
+
+    df = pd.DataFrame({"celltype_a": list("AAABBBCCC"), "celltype_b": list("AAAAAAAAA"), "expr": list(range(9))})
+    print(df)
+    print(build_flux_mat(df, piv_kws={"values": "expr", "aggfunc":"mean"}))
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots()
+    plot_cellphone_chords(ax, None, build_flux_mat(df, piv_kws={"values": "expr", "aggfunc":"mean"}))
