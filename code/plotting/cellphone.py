@@ -222,18 +222,36 @@ def chordDiagram(X, ax, colors=None, width=0.1, pad=2, chordwidth=0.7):
     return nodePos
 
 
-def plot_cellphone_chords(ax, cellphone_df, palette="tab20"):
-    g = cellphone_df.groupby(["celltype_a", "celltype_b"])
-    z = g.size().to_frame()
-    z.columns = ["counts"]
-    z = z.reset_index()
-    flux = pd.pivot_table(z, values="counts", index="celltype_a", columns="celltype_b").fillna(0).astype(int)
+def plot_cellphone_chords(ax, cellphone_df, flux=None, palette="tab20"):
+    if flux is None:
+        g = cellphone_df.groupby(["celltype_a", "celltype_b"])
+        z = g.size().to_frame()
+        z.columns = ["counts"]
+        z = z.reset_index()
+        flux = pd.pivot_table(z, values="counts", index="celltype_a", columns="celltype_b").fillna(0).astype(int)
+
+    if isinstance(palette, str):
+        palette = sns.mpl_palette(palette, len(flux.columns))
+
+    if flux.shape[0] != flux.shape[1]:
+        raise Exception("This function expects the same number of rows and columns!")
+    if flux.columns != flux.index:
+        raise Exception("This function expects the same names in the rows and columns!")
 
     ax.set_axis_off()
 
-    nodePos = chordDiagram(flux.values, ax, colors=sns.mpl_palette(palette, len(flux.columns)))
+    nodePos = chordDiagram(flux.values, ax, colors=palette)
     prop = dict(fontsize=12 * 0.8, ha='center', va='center')
     for k, label in enumerate(flux.columns):
         ax.text(nodePos[k][0], nodePos[k][1], label, rotation=nodePos[k][2], **prop)
 
     return ax
+
+
+def build_flux_mat(df, senders=None, receivers=None, piv_kws={"aggfunc":"size"}):
+    flux = df.pivot_table(index="celltype_a", columns="celltype_b", fill_value=0, **piv_kws).astype(int)
+    if senders is not None:
+        flux.loc[~flux.index.isin(senders), :] = 0
+    if receivers is not None:
+        flux.loc[:, ~flux.columns.isin(receivers)] = 0
+    return flux
