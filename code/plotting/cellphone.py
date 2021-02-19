@@ -248,26 +248,31 @@ def plot_cellphone_chords(ax, cellphone_df, flux=None, palette="tab20"):
     return ax
 
 
-def build_flux_mat(df, senders=None, receivers=None, piv_kws={"aggfunc":"size"}):
+def build_flux_mat(df, senders=None, receivers=None, piv_kws={"aggfunc":"size"}, dtype=int):
     flux = df.pivot_table(index="celltype_a", columns="celltype_b", fill_value=0, **piv_kws).astype(int)
+
     possible_cts = flux.columns.union(flux.index)
     missing_cols = possible_cts.difference(flux.columns)
     missing_rows = possible_cts.difference(flux.index)
-    flux.loc[:, missing_cols] = 0
-    flux.loc[missing_rows, :] = 0
+    for col in missing_cols:
+        flux[col] = 0
+    for row in missing_rows:
+        flux.loc[row, :] = 0
+
     if senders is not None:
         flux.loc[~flux.index.isin(senders), :] = 0
     if receivers is not None:
         flux.loc[:, ~flux.columns.isin(receivers)] = 0
-    return flux
+    return flux.astype(dtype)
 
 
 if __name__ == "__main__":
     import pandas as pd
 
-    df = pd.DataFrame({"celltype_a": list("AAABBBCCC"), "celltype_b": list("AAAAAAAAA"), "expr": list(range(9))})
-    print(df)
-    print(build_flux_mat(df, piv_kws={"values": "expr", "aggfunc":"mean"}))
-    import matplotlib.pyplot as plt
-    fig, ax = plt.subplots()
-    plot_cellphone_chords(ax, None, build_flux_mat(df, piv_kws={"values": "expr", "aggfunc":"mean"}))
+    df1 = pd.DataFrame({"celltype_a": list("AAABBBCCC"), "celltype_b": list("AAAAAAAAA"), "expr": list(range(9))})
+    df2 = pd.DataFrame({"celltype_a": list("AAAAAAAAA"), "celltype_b": list("AAABBBCCC"), "expr": list(range(9))})
+    print(build_flux_mat(df1, piv_kws={"values": "expr", "aggfunc":"mean"}))
+    print(build_flux_mat(df2, piv_kws={"values": "expr", "aggfunc":"mean"}))
+    #import matplotlib.pyplot as plt
+    #fig, ax = plt.subplots()
+    #plot_cellphone_chords(ax, None, build_flux_mat(df, piv_kws={"values": "expr", "aggfunc":"mean"}))
