@@ -259,10 +259,13 @@ def build_flux_mat(df, senders=None, receivers=None, piv_kws={"aggfunc":"size"},
     for row in missing_rows:
         flux.loc[row, :] = 0
 
+    flux = flux.reindex(flux.columns)
+
     if senders is not None:
         flux.loc[~flux.index.isin(senders), :] = 0
     if receivers is not None:
         flux.loc[:, ~flux.columns.isin(receivers)] = 0
+
     return flux.astype(dtype)
 
 
@@ -270,7 +273,7 @@ if __name__ == "__main__":
     import pandas as pd
 
     df1 = pd.DataFrame({"celltype_a": list("AAABBBCCC"), "celltype_b": list("AAAAAAAAA"), "expr": list(range(9))})
-    df2 = pd.DataFrame({"celltype_a": list("AAAAAAAAA"), "celltype_b": list("AAABBBCCC"), "expr": list(range(9))})
+    df2 = pd.DataFrame({"celltype_a": list("CCCCCCCCC"), "celltype_b": list("AAABBBCCC"), "expr": list(range(9))})
     print(build_flux_mat(df1, piv_kws={"values": "expr", "aggfunc":"mean"}))
     print(build_flux_mat(df2, piv_kws={"values": "expr", "aggfunc":"mean"}))
     #import matplotlib.pyplot as plt
