@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ### SLURM HEADER
 #SBATCH --job-name=infercnv
-#SBATCH --output=infercnv-%j.log
+#SBATCH --output=/projects/robson-lab/research/endometriosis/logs/infercnv-%j.log
 #SBATCH --mail-type=FAIL
 
 #SBATCH --qos=batch

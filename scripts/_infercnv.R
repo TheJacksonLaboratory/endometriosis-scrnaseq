@@ -4,12 +4,14 @@ library(infercnv)
 
 args = commandArgs(trailingOnly=TRUE)
 data_dir <- args[1]
+print(args)
+print(data_dir)
 
 setwd(data_dir)
 
-counts_file <- paste(data_dir, "inputs", "counts.txt", sep="/")
-gene_file <- paste(data_dir, "inputs", "gene_pos2.txt", sep="/")
-anno_file <- paste(data_dir, "inputs", "anno.txt", sep="/")
+counts_file <- paste(data_dir, "counts.txt", sep="/")
+gene_file <- paste(data_dir, "gene_pos2.txt", sep="/")
+anno_file <- paste(data_dir, "anno.txt", sep="/")
 out_dir <- paste(data_dir, "outputs-no-hmm", sep="/")
 
 infercnv_obj <- CreateInfercnvObject(
