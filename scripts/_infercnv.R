@@ -30,6 +30,6 @@ infercnv_obj <- infercnv::run(
     out_dir=out_dir,
     cluster_by_groups=TRUE,
     denoise=TRUE,
-    no_plot=FALSE
+    no_plot=FALSE,
     HMM=FALSE
 )
