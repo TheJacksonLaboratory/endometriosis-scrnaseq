@@ -36,4 +36,4 @@ subscript="${script_dir}/_infercnv.R"
 # HACKKKK
 cp /projects/robson-lab/research/ibc/analysis/infercnv/IBC-epithelial/inputs/gene_pos2.txt ${data_dir}
 
-singularity exec ${img} Rscript ${subscript} ${datadir}
+singularity exec ${img} Rscript ${subscript} ${data_dir}
