@@ -29,7 +29,8 @@ elif [ ! -d ${data_dir} ]; then
     exit 2
 fi
 
-script_dir=$(realpath $(dirname $0))
+#script_dir=$(realpath $(dirname $0))
+script_dir="/projects/robson-lab/research/endometriosis/manuscript/scripts"
 subscript="${script_dir}/_infercnv.R"
 
 # HACKKKK
