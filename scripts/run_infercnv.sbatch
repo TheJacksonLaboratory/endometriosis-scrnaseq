@@ -18,7 +18,7 @@ localcores=${SLURM_TASKS_PER_NODE}
 cd ${SLURM_SUBMIT_DIR}
 
 module load singularity
-img="library://jaxreg/singlecell/jupyterlab:1.3.0"
+img="/projects/robson-lab/research/endometriosis/tools/jupyterlab-with-r.sif"
 
 data_dir=$1
 if [ -z ${data_dir} ]; then
