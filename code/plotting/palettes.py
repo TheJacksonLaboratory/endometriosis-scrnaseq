@@ -15,5 +15,3 @@ main_palette = (
 )
 
 heatmap_cmap = cmo.tools.cmap(cmo.cm.balance(np.linspace(0, 1, 256), 0.9))
-
-)
