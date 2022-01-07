@@ -4,8 +4,9 @@
 #SBATCH --output=/projects/robson-lab/research/endometriosis/logs/infercnv-%j.log
 #SBATCH --mail-type=FAIL
 
-#SBATCH --qos=batch
-#SBATCH --time=72:00:00
+#SBATCH --partition=compute
+#SBATCH --qos=long
+#SBATCH --time=120:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=96000
