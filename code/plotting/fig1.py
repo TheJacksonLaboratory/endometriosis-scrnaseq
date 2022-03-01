@@ -8,6 +8,27 @@ import seaborn as sns
 from plotting.chord import sankey
 
 
+def set_thousands_ticks(ax, ticks, axis="x"):
+    _ax = ax.xaxis
+    f = ax.set_xlim
+    if axis != "x":
+        _ax = ax.yaxis
+        f = ax.set_ylim
+    _ax.set_ticks(ticks)
+    labs = []
+    for k in ticks:
+        l = k
+        m = k%1000
+        if k >= 1000:
+            if m > 0:
+                l = f"{k/1000:.1f}k"
+            else:
+                l = f"{k//1000}k"
+        labs.append(l)
+    _ax.set_ticklabels(labs)
+    f(ticks[0]*0.99, ticks[-1]*1.01)
+
+
 def summary_figure_1d(
     adata, 
     left_margin, 
@@ -18,7 +39,15 @@ def summary_figure_1d(
     right_palette=[],
     cmap="magma",
     use_log=False,
+    violin_limits={}
 ):
+    plot_limits = {
+        "patient": {"umis": (1000, 10000, 50000), "genes": (500, 3000, 10000), "cells": (0, 5000, 10000)},
+        "sample_type": {"umis": (1000, 10000, 50000), "genes": (500, 3000, 10000), "cells": (0, 10000, 20000, 30000)},
+    }
+    plot_limits.update(**violin_limits)
+
+
     width = 3#len(adata.obs[x_column].unique())
     height = len(adata.obs[left_margin].unique())
     fig = plt.figure(facecolor="white", dpi=300, figsize=(8, 6))
@@ -46,8 +75,9 @@ def summary_figure_1d(
 
     genes_axs = [pat_genes, st_genes]
     umis_axs = [pat_umis, st_umis]
-    for a in genes_axs + umis_axs:
-        a.grid(zorder=-100, lw=0.5, color="0.5")
+    count_axs = [pat_counts, st_counts]
+    for a in genes_axs + umis_axs + count_axs:
+        a.grid(zorder=-100, lw=0.25, color="0.5")
 
     for col in [left_margin, right_margin]:
         adata.obs[col] = adata.obs[col].astype("category")
@@ -102,57 +132,33 @@ def summary_figure_1d(
         ax.set_xticklabels([])
         ax.set_yticklabels([])
 
-    pat_labels.tick_params(bottom=False, left=False, right=False, top=False)
-    st_labels.tick_params(bottom=False, left=False, right=False, top=False)
-    explainer_ax.tick_params(bottom=False, left=False, right=False, top=False)
-        
-    pat_counts.invert_xaxis() # bars bottoms start on the right
-    pat_counts.set_xticks([0, 5000, 10000])
-    pat_counts.set_xticklabels(["0", "5k", "10k"])
-
-    st_counts.set_xticks([0, 10000, 20000, 30000])
-    st_counts.set_xticklabels(["0", "10k", "20k", "30k"])
     st_counts.yaxis.set_label_position("right")
     st_genes.yaxis.set_label_position("right")
     st_umis.yaxis.set_label_position("right")
 
-
-    orients = "vvh" 
     if use_log:
         st_umis.set_xscale("log")
         st_genes.set_xscale("log")
         pat_umis.set_xscale("log")
         pat_genes.set_xscale("log")
-
-        umi_lims = (1000, 100000)
-        umi_ticks = [1000, 10000, 50000]
-        umi_labels = ["1k", "10k", "50k"]
-        gene_lims = (500, 10000)
-        gene_ticks = [500, 3000, 10000]
-        gene_labels = ["500", "3k", "10k"]
-    else:
-        umi_lims = (0, 60000)
-        umi_ticks = [0, 30000, 60000]
-        umi_labels = ["0", "30k", "60k"]
-        gene_lims = (0, 10000)
-        gene_ticks = [0, 5000, 10000]
-        gene_labels = ["0", "5k", "10k"]
-
-    lim_func = {"v": "set_xlim", "h": "set_ylim"}
-    tick_func = {"v": "set_xticks", "h": "set_yticks"}
-    ticklabel_func = {"v": "set_xticklabels", "h": "set_yticklabels"}
-    for a, o in zip(umis_axs, orients):
-        getattr(a, lim_func[o])(*umi_lims)
-        getattr(a, tick_func[o])(umi_ticks)
-        getattr(a, ticklabel_func[o])(umi_labels)
-    for a, o in zip(genes_axs, orients):
-        getattr(a, lim_func[o])(*gene_lims)
-        getattr(a, tick_func[o])(gene_ticks)
-        getattr(a, ticklabel_func[o])(gene_labels)
-
+    
+    set_thousands_ticks(st_counts, plot_limits["sample_type"]["cells"])
+    set_thousands_ticks(st_genes, plot_limits["sample_type"]["genes"])
+    set_thousands_ticks(st_umis, plot_limits["sample_type"]["umis"])
+    set_thousands_ticks(pat_counts, plot_limits["patient"]["cells"])
+    set_thousands_ticks(pat_genes, plot_limits["patient"]["genes"])
+    set_thousands_ticks(pat_umis, plot_limits["patient"]["umis"])
+    
     pat_umis.invert_xaxis()
     pat_genes.invert_xaxis()
+    pat_counts.invert_xaxis()
 
+    pat_labels.tick_params(bottom=False, left=False, right=False, top=False)
+    st_labels.tick_params(bottom=False, left=False, right=False, top=False)
+    explainer_ax.tick_params(bottom=False, left=False, right=False, top=False)
+
+    pat_counts.tick_params(bottom=True, left=False, right=False, top=False)
+    st_counts.tick_params(bottom=True, left=False, right=False, top=False)
     pat_genes.tick_params(bottom=True, left=False, right=False, top=False)
     st_genes.tick_params(bottom=True, left=False, right=False, top=False)
     pat_umis.tick_params(bottom=True, left=False, right=False, top=False)
@@ -186,6 +192,7 @@ def summary_figure_1d(
     st_counts.set_xlabel("Cells", size=8)
 
     return fig
+
 
 def summary_figure_1e(
     adata, 

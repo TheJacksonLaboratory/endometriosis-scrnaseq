@@ -114,3 +114,25 @@ def curate_ppi_lists(results_dir):
 
     return curated
 
+
+def annotate_cellphone_results(dataframe):
+    sample_ids = pd.Index(dataframe.partition_key.unique())
+    control = sample_ids[sample_ids.str.endswith("Ctrl")]
+    EuE = sample_ids[sample_ids.str.endswith("EuE")]
+    EcP = sample_ids[sample_ids.str.endswith("EcP")]
+    EcPA = sample_ids[sample_ids.str.endswith("EcPA")]
+    EcO = sample_ids[sample_ids.str.endswith("EcO")]
+    
+    samples = [control, EuE, EcP, EcPA, EcO]
+    types = ["control","EuE", "EcP","EcPA","EcO"]
+
+    for sample, t in zip(samples, types):
+        dataframe.loc[dataframe.partition_key.isin(sample), "sample_type"] = t
+    
+    assert "sample_type" in dataframe.columns
+    dataframe["celltype_pair"] = dataframe.celltype_a + "->" + dataframe.celltype_b
+    dataframe["samples_in_sampletype"] = dataframe.groupby("sample_type").partition_key.transform(lambda x: len(x.unique()))
+    dataframe["n_samples_observed"] = dataframe.groupby(["sample_type", "celltype_pair", "interacting_pair"]).partition_key.transform(lambda x: len(x.unique()))
+    dataframe["frac_samples_observed"] = dataframe.n_samples_observed / dataframe.samples_in_sampletype
+    dataframe["n_celltype_pairs"] = dataframe.groupby(["sample_type", "interacting_pair"]).celltype_pair.transform(lambda x: len(x.unique()))
+    dataframe["self_interaction"] = dataframe.celltype_a == dataframe.celltype_b

@@ -7,6 +7,24 @@ This repository accompanies the manuscript
 currently available on [bioRxiv][biorxiv_link].
 
 
+## Data Availability
+
+### Raw and processed data
+Currently this data is under embargo at GEO at [GSE179640][geo_link] to be
+released upon publication.
+
+### Analyzed data objects
+Additionally upon publication, the analyzed objects (in `.h5ad` format) will be
+available for download or exploratory viewing at the 
+[JAX Single Cell portal][portal_link].
+
+
+## Issues with this code or repository
+We are committed to making this analysis and its accompanying figures
+reproducible.  If you experience problems, a bug, a question, etc., please open
+an issue and tag @wflynny or @yulianatan.
+
+
 ## For development
 
 1.  Clone this repository somewhere with
@@ -25,12 +43,14 @@ currently available on [bioRxiv][biorxiv_link].
 4.  In that notebook, do the following after your standard imports:
     ```{python}
     import os, sys
-    sys.path.append(f"{os.getcwd()}/../code/plotting")
-    from plot_settings import *
-    from palettes import *
-    from scatter import *
-    from matrix import *
+    sys.path.append(f"{os.getcwd()}/../code")
+    from plotting.plot_settings import *
+    from plotting.palettes import *
+    from plotting.scatter import *
+    from plotting.matrix import *
     ```
 
 
-[biorxiv_link]: https://biorxiv.org
+[biorxiv_link]: https://www.biorxiv.org/content/10.1101/2021.07.28.453839v1
+[geo_link]: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE179640
+[portal_link]: https://singlecell.jax.org

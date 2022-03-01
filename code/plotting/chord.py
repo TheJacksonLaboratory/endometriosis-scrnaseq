@@ -77,7 +77,7 @@ def chord(
 ):
     assert start1 <= 0
     assert end1 <= 0
-    
+
     angle1 *= np.pi / 180
     angle2 *= np.pi / 180
     x1, y1 = abs(start1) * np.cos(angle1) - x_offset, abs(start1) * np.sin(angle1)

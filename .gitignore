@@ -32,3 +32,5 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+*.h5ad

@@ -1,0 +1,700 @@
+Process,Genes 
+Cell cycle regulation,ATAD2
+Cell cycle regulation,BORA
+Cell cycle regulation,BTG3
+Cell cycle regulation,CASP8AP2
+Cell cycle regulation,CCDC134
+Cell cycle regulation,CCNA2
+Cell cycle regulation,CCNB1
+Cell cycle regulation,CCNB2
+Cell cycle regulation,CCNE1
+Cell cycle regulation,CCNE2
+Cell cycle regulation,CDC25A
+Cell cycle regulation,CDC25B
+Cell cycle regulation,CDC25C
+Cell cycle regulation,CDC5L
+Cell cycle regulation,CDC7
+Cell cycle regulation,CDCA3
+Cell cycle regulation,CDCA4
+Cell cycle regulation,CDCA7
+Cell cycle regulation,CDK1
+Cell cycle regulation,CDK19
+Cell cycle regulation,CDK4
+Cell cycle regulation,CDKN2C
+Cell cycle regulation,CDKN2D
+Cell cycle regulation,CDKN3
+Cell cycle regulation,CKS1B
+Cell cycle regulation,CKS2
+Cell cycle regulation,CRLF3
+Cell cycle regulation,DBF4B
+Cell cycle regulation,DLGAP5
+Cell cycle regulation,E2F1
+Cell cycle regulation,E2F7
+Cell cycle regulation,E2F8
+Cell cycle regulation,FAM83D
+Cell cycle regulation,FBXO5
+Cell cycle regulation,FOXM1
+Cell cycle regulation,FZR1
+Cell cycle regulation,GMNN
+Cell cycle regulation,LIN54
+Cell cycle regulation,LIN9
+Cell cycle regulation,MASTL
+Cell cycle regulation,MELK
+Cell cycle regulation,MYBL2
+Cell cycle regulation,NPAT
+Cell cycle regulation,ODF2
+Cell cycle regulation,PA2G4
+Cell cycle regulation,PBK
+Cell cycle regulation,PIMREG
+Cell cycle regulation,PKMYT1
+Cell cycle regulation,PRR11
+Cell cycle regulation,RBL1
+Cell cycle regulation,STIL
+Cell cycle regulation,TCF19
+Cell cycle regulation,TFDP1
+Cell cycle regulation,TICRR
+Cell cycle regulation,TOE1
+Cell cycle regulation,TRIM28
+Cell cycle regulation,TTF2
+Cell cycle regulation,UBE2C
+Cell cycle regulation,UBE2S
+Cell cycle regulation,UHRF2
+Cell cycle regulation,USP37
+Cell cycle regulation,WEE1
+Cell cycle regulation,CDK2
+Cell cycle regulation,AURKA
+Cell cycle regulation,KIF14
+Cell cycle regulation,DTL
+Cell cycle regulation,GTSE1
+Cell cycle regulation,PLK1
+Chromatin organization,ANP32B
+Chromatin organization,ANP32E
+Chromatin organization,ASF1B
+Chromatin organization,CHAF1A
+Chromatin organization,CHAF1B
+Chromatin organization,HJURP
+Chromatin organization,SLBP
+Chromatin organization,DNMT1
+Chromatin organization,UHRF1
+Chromatin organization,HIST1H1A
+Chromatin organization,HIST1H1B
+Chromatin organization,HIST1H1C
+Chromatin organization,HIST1H1D
+Chromatin organization,HIST1H1E
+Chromatin organization,HIST1H2AB
+Chromatin organization,HIST1H2AC
+Chromatin organization,HIST1H2AE
+Chromatin organization,HIST1H2AG
+Chromatin organization,HIST1H2AH
+Chromatin organization,HIST1H2AI
+Chromatin organization,HIST1H2AJ
+Chromatin organization,HIST1H2AK
+Chromatin organization,HIST1H2AL
+Chromatin organization,HIST1H2AM
+Chromatin organization,HIST1H2APS4
+Chromatin organization,HIST1H2BB
+Chromatin organization,HIST1H2BC
+Chromatin organization,HIST1H2BE
+Chromatin organization,HIST1H2BF
+Chromatin organization,HIST1H2BG
+Chromatin organization,HIST1H2BH
+Chromatin organization,HIST1H2BI
+Chromatin organization,HIST1H2BJ
+Chromatin organization,HIST1H2BK
+Chromatin organization,HIST1H2BL
+Chromatin organization,HIST1H2BM
+Chromatin organization,HIST1H2BN
+Chromatin organization,HIST1H2BO
+Chromatin organization,HIST1H3A
+Chromatin organization,HIST1H3B
+Chromatin organization,HIST1H3C
+Chromatin organization,HIST1H3D
+Chromatin organization,HIST1H3F
+Chromatin organization,HIST1H3G
+Chromatin organization,HIST1H3H
+Chromatin organization,HIST1H3I
+Chromatin organization,HIST1H3J
+Chromatin organization,HIST1H4A
+Chromatin organization,HIST1H4B
+Chromatin organization,HIST1H4C
+Chromatin organization,HIST1H4D
+Chromatin organization,HIST1H4E
+Chromatin organization,HIST1H4F
+Chromatin organization,HIST1H4I
+Chromatin organization,HIST1H4J
+Chromatin organization,HIST1H4K
+Chromatin organization,HIST1H4L
+Chromatin organization,HIST2H2AA4
+Chromatin organization,HIST2H2AB
+Chromatin organization,HIST2H2AC
+Chromatin organization,HIST2H2BA
+Chromatin organization,HIST2H2BF
+Chromatin organization,HIST2H3A
+Chromatin organization,HIST2H4B 
+Centrosome regulation,ALMS1
+Centrosome regulation,CCNF
+Centrosome regulation,CCP110
+Centrosome regulation,CCT3
+Centrosome regulation,CDK5RAP2
+Centrosome regulation,CENPJ
+Centrosome regulation,CEP120
+Centrosome regulation,CEP128
+Centrosome regulation,CEP135
+Centrosome regulation,CEP152
+Centrosome regulation,CEP162
+Centrosome regulation,CEP192
+Centrosome regulation,CEP295
+Centrosome regulation,CEP41
+Centrosome regulation,CEP44
+Centrosome regulation,CEP57
+Centrosome regulation,CEP57L1
+Centrosome regulation,CEP72
+Centrosome regulation,CEP76
+Centrosome regulation,CEP78
+Centrosome regulation,CEP89
+Centrosome regulation,CEP97
+Centrosome regulation,CNTLN
+Centrosome regulation,CNTROB
+Centrosome regulation,FAM161A
+Centrosome regulation,KIAA0586
+Centrosome regulation,KIF24
+Centrosome regulation,PLK4
+Centrosome regulation,POC5
+Centrosome regulation,SASS6
+Centrosome regulation,TMEM107
+Centrosome regulation,NDE1
+Centrosome regulation,POC1A
+Centrosome regulation,POC1B
+Cytokinesis,ANLN
+Cytokinesis,ARHGAP11A
+Cytokinesis,ASPM
+Cytokinesis,AURKB
+Cytokinesis,CALM3
+Cytokinesis,CEP55
+Cytokinesis,CIT
+Cytokinesis,CKAP2
+Cytokinesis,CNTRL
+Cytokinesis,KIF20A
+Cytokinesis,KIF20B
+Cytokinesis,KIF23
+Cytokinesis,KIF4B
+Cytokinesis,PRC1
+Cytokinesis,RACGAP1
+Cytokinesis,INCENP
+Cytokinesis,ECT2
+Cytokinesis,HAUS1
+Cytokinesis,HAUS2
+Cytokinesis,HAUS6
+DNA damage,ATAD5
+DNA damage,BARD1
+DNA damage,DDIAS
+DNA damage,DONSON
+DNA damage,INTS7
+DNA damage,MBD4
+DNA damage,MTBP
+DNA damage,PARP2
+DNA damage,RAD18
+DNA damage,RFWD3
+DNA damage,RHNO1
+DNA damage,RUVBL2
+DNA damage,TDP1
+DNA damage,TTI1
+DNA damage,TTI2
+DNA damage,PCLAF
+DNA damage,DDX11
+DNA damage,POLH
+DNA damage,LIG1
+DNA damage,LIG3
+DNA damage,NEIL3
+DNA damage,PARP1
+DNA damage,RPA1
+DNA damage,RPA2
+DNA damage,RPA3
+DNA damage,POLQ
+DNA damage,POLE
+DNA damage,DEK
+DNA damage,MRE11
+DNA damage,RNF168
+DNA damage,CHEK2
+DNA damage,CLSPN
+DNA damage,EME1
+DNA damage,TIMELESS
+DNA damage,TIPIN
+DNA damage,MMS22L
+DNA damage,PCNA
+DNA damage,BRIP1
+DNA damage,FIGNL1
+DNA damage,HMGB1
+DNA damage,HMGB2
+DNA damage,INIP
+DNA damage,MND1
+DNA damage,NSMCE4A
+DNA damage,NUCKS1
+DNA damage,PARPBP
+DNA damage,PIF1
+DNA damage,PSMC3IP
+DNA damage,RAD51
+DNA damage,RAD51AP1
+DNA damage,RAD51B
+DNA damage,RAD51C
+DNA damage,RAD54B
+DNA damage,RAD54L
+DNA damage,RBBP8
+DNA damage,SFR1
+DNA damage,TSN
+DNA damage,XRCC2
+DNA damage,CHEK1
+DNA damage,BRCA1
+DNA damage,BRCA2
+DNA damage,XRCC1
+DNA damage,MCM8
+DNA damage,ATRIP
+DNA damage,DCLRE1A
+DNA damage,EXO5
+DNA damage,FANCA
+DNA damage,FANCB
+DNA damage,FANCD2
+DNA damage,FANCE
+DNA damage,FANCG
+DNA damage,FANCI
+DNA damage,FANCL
+DNA damage,FANCM
+DNA damage,UBE2T
+DNA damage,USP1
+DNA damage,SLF1
+DNA damage,EXO1
+DNA damage,MLH1
+DNA damage,MSH2
+DNA damage,MSH5
+DNA damage,MSH6
+DNA damage,POLD2
+DNA damage,POLD3
+DNA damage,MGME1
+DNA damage,ATP23
+DNA damage,DCLRE1B
+DNA damage,MDC1
+DNA damage,RIF1
+DNA damage,XRCC4
+DNA damage,XRCC5
+DNA damage,XRCC6
+DNA replication,BAZ1B
+DNA replication,HAT1
+DNA replication,NASP
+DNA replication,RMI1
+DNA replication,RMI2
+DNA replication,RNASEH2A
+DNA replication,SSRP1
+DNA replication,SUPT16H
+DNA replication,RECQL4
+DNA replication,BLM
+DNA replication,DNA2
+DNA replication,POLA1
+DNA replication,POLA2
+DNA replication,POLD1
+DNA replication,POLE2
+DNA replication,POLE3
+DNA replication,PRIM1
+DNA replication,PRIM2
+DNA replication,PRIMPOL
+DNA replication,FEN1
+DNA replication,CDC45
+DNA replication,MCM10
+DNA replication,CDC6
+DNA replication,CDT1
+DNA replication,MCM3
+DNA replication,MCM4
+DNA replication,MCM5
+DNA replication,MCM6
+DNA replication,MCM7
+DNA replication,ORC1
+DNA replication,ORC2
+DNA replication,ORC3
+DNA replication,ORC5
+DNA replication,ORC6
+DNA replication,MCMBP
+DNA replication,DBF4
+DNA replication,FAM111A
+DNA replication,GINS1
+DNA replication,GINS2
+DNA replication,GINS3
+DNA replication,GINS4
+DNA replication,MCM2
+DNA replication,RFC1
+DNA replication,RFC2
+DNA replication,RFC3
+DNA replication,RFC4
+DNA replication,RFC5
+DNA replication,TOPBP1
+DNA replication,WDHD1
+DNA replication,WRAP53 
+DNA metabolism,CTPS2
+DNA metabolism,DCK
+DNA metabolism,DCTPP1
+DNA metabolism,DHFR
+DNA metabolism,DTYMK
+DNA metabolism,DUT
+DNA metabolism,GMPS
+DNA metabolism,HPRT1
+DNA metabolism,MTHFD1
+DNA metabolism,NUDT15
+DNA metabolism,PAICS
+DNA metabolism,PFAS
+DNA metabolism,PRPS2
+DNA metabolism,RRM1
+DNA metabolism,RRM2
+DNA metabolism,SLC29A1
+DNA metabolism,TK1
+DNA metabolism,TYMS
+Microtubule regulation,CETN3
+Microtubule regulation,CKAP5
+Microtubule regulation,DIAPH3
+Microtubule regulation,KATNAL1
+Microtubule regulation,KIF15
+Microtubule regulation,KIF18A
+Microtubule regulation,KIF18B
+Microtubule regulation,KIF22
+Microtubule regulation,KIFC1
+Microtubule regulation,TACC3
+Microtubule regulation,TUBA1B
+Microtubule regulation,TUBA1C
+Microtubule regulation,TUBB
+Microtubule regulation,TUBB3
+Microtubule regulation,TUBB4B
+Microtubule regulation,TUBE1
+Microtubule regulation,TUBG1
+Microtubule regulation,TUBGCP3
+Microtubule regulation,KIF4A
+Microtubule regulation,SKA1
+Microtubule regulation,SKA2
+Microtubule regulation,SKA3
+Microtubule regulation,PCNT
+Microtubule regulation,NUSAP1
+Microtubule regulation,STMN1
+Chromosome partition,BIRC5
+Chromosome partition,BUB1
+Chromosome partition,BUB3
+Chromosome partition,CDCA8
+Chromosome partition,CEP85
+Chromosome partition,CTC
+Chromosome partition,ESP1
+Chromosome partition,KIFC
+Chromosome partition,KNL
+Chromosome partition,KNSRN
+Chromosome partition,MIS2
+Chromosome partition,MIS8BP1
+Chromosome partition,MKI7
+Chromosome partition,NEK
+Chromosome partition,NSL
+Chromosome partition,NUP7
+Chromosome partition,NUP3
+Chromosome partition,OIP
+Chromosome partition,PTT1
+Chromosome partition,SGO
+Chromosome partition,SGO
+Chromosome partition,TOPA
+Chromosome partition,GEN
+Chromosome partition,CDC2
+Chromosome partition,DSN
+DNA condensation,CDCA5
+DNA condensation,ESCO2
+DNA condensation,NCAPD2
+DNA condensation,NCAPD3
+DNA condensation,NCAPG
+DNA condensation,NCAPG2
+DNA condensation,NCAPH
+DNA condensation,NCAPH2
+DNA condensation,SMC2
+DNA condensation,SMC4
+DNA condensation,STAG2
+Kinetochore formation,CENPA
+Kinetochore formation,CENPE
+Kinetochore formation,CENPF
+Kinetochore formation,CENPH
+Kinetochore formation,CENPI
+Kinetochore formation,CENPK
+Kinetochore formation,CENPL
+Kinetochore formation,CENPM
+Kinetochore formation,CENPN
+Kinetochore formation,CENPO
+Kinetochore formation,CENPP
+Kinetochore formation,CENPQ
+Kinetochore formation,CENPT
+Kinetochore formation,CENPU
+Kinetochore formation,CENPW
+Kinetochore formation,ITGB3BP
+Kinetochore formation,MIS18A
+Kinetochore formation,SPDL1
+Kinetochore formation,SPICE1
+Kinetochore formation,NDC80
+Kinetochore formation,NUF2
+Kinetochore formation,SPC24
+Kinetochore formation,SPC25
+Kinetochore formation,NUP107
+Kinetochore formation,KNTC1
+Nuclear envelope regulation,LBR
+Nuclear envelope regulation,LMNB1
+Nuclear envelope regulation,LMNB2
+Nuclear envelope regulation,NDC1
+Nuclear envelope regulation,NUP133
+Nuclear envelope regulation,NUP155
+Nuclear envelope regulation,NUP160
+Nuclear envelope regulation,NUP188
+Nuclear envelope regulation,NUP205
+Nuclear envelope regulation,NUP35
+Nuclear envelope regulation,NUP50
+Nuclear envelope regulation,NUP85
+Nuclear envelope regulation,NUP88
+Nuclear envelope regulation,NUP93
+Nuclear envelope regulation,REEP4
+Nuclear envelope regulation,SUGT1
+Nuclear envelope regulation,TMPO
+Nuclear envelope regulation,VRK1
+Spindle assembly and regulation,AUNIP
+Spindle assembly and regulation,CCSAP
+Spindle assembly and regulation,CKAP2L
+Spindle assembly and regulation,GPSM2
+Spindle assembly and regulation,HASPIN
+Spindle assembly and regulation,KIF11
+Spindle assembly and regulation,KPNB1
+Spindle assembly and regulation,LRRCC1
+Spindle assembly and regulation,NEDD1
+Spindle assembly and regulation,PSRC1
+Spindle assembly and regulation,RAN
+Spindle assembly and regulation,RCC1
+Spindle assembly and regulation,SPAG5
+Spindle assembly and regulation,TPX2
+Spindle assembly and regulation,WDR62
+Spindle assembly and regulation,HAUS3
+Spindle assembly and regulation,HAUS4
+Spindle assembly and regulation,HAUS5
+Spindle assembly and regulation,HAUS7
+Spindle assembly and regulation,HAUS8
+Spindle checkpoint,ANAPC1
+Spindle checkpoint,ANAPC15
+Spindle checkpoint,ANAPC7
+Spindle checkpoint,BUB1B
+Spindle checkpoint,CDC20
+Spindle checkpoint,CDC23
+Spindle checkpoint,CDC27
+Spindle checkpoint,ERCC6L
+Spindle checkpoint,MAD2L1
+Spindle checkpoint,MAD2L2
+Spindle checkpoint,TRIP13
+Spindle checkpoint,TTK
+Spindle checkpoint,ZW10
+Spindle checkpoint,ZWILCH
+Other,CHTF18
+Other,DSCC1
+Other,PDS5B
+Other,RAD21
+Other,SMC1A
+Other,SMC3
+Other,ACD
+Other,CTC1
+Other,POT1
+Other,TERF1
+Other,CENPX
+Function known but link to cell division not well established,ARL6IP1
+Function known but link to cell division not well established,BCL2L12
+Function known but link to cell division not well established,BCLAF1
+Function known but link to cell division not well established,CASP2
+Function known but link to cell division not well established,CDCA7L
+Function known but link to cell division not well established,FAF1
+Function known but link to cell division not well established,NAE1
+Function known but link to cell division not well established,TAF9B
+Function known but link to cell division not well established,DEPDC1B
+Function known but link to cell division not well established,FGFR1OP
+Function known but link to cell division not well established,HMMR
+Function known but link to cell division not well established,MYO19
+Function known but link to cell division not well established,STRIP2
+Function known but link to cell division not well established,TROAP
+Function known but link to cell division not well established,ANAPC1P1
+Function known but link to cell division not well established,ARHGEF39
+Function known but link to cell division not well established,CCHCR1
+Function known but link to cell division not well established,LY6K
+Function known but link to cell division not well established,TTLL12
+Function known but link to cell division not well established,HMGB3
+Function known but link to cell division not well established,APOBEC3A_B
+Function known but link to cell division not well established,SMCHD1
+Function known but link to cell division not well established,SMYD4
+Function known but link to cell division not well established,SUZ12
+Function known but link to cell division not well established,ASH2L
+Function known but link to cell division not well established,BRD8
+Function known but link to cell division not well established,CBX1
+Function known but link to cell division not well established,CBX3
+Function known but link to cell division not well established,CBX5
+Function known but link to cell division not well established,CTCFL
+Function known but link to cell division not well established,EZH2
+Function known but link to cell division not well established,H2AFV
+Function known but link to cell division not well established,HELLS
+Function known but link to cell division not well established,KDM4D
+Function known but link to cell division not well established,METTL4
+Function known but link to cell division not well established,NAP1L4
+Function known but link to cell division not well established,NSD2
+Function known but link to cell division not well established,PHF19
+Function known but link to cell division not well established,SUV39H1
+Function known but link to cell division not well established,SUV39H2
+Function known but link to cell division not well established,YEATS4
+Function known but link to cell division not well established,H2AFX
+Function known but link to cell division not well established,H2AFZ
+Function known but link to cell division not well established,RTKN2
+Function known but link to cell division not well established,DMC1
+Function known but link to cell division not well established,MNS1
+Function known but link to cell division not well established,ACYP1
+Function known but link to cell division not well established,CHAC2
+Function known but link to cell division not well established,MTFR2
+Function known but link to cell division not well established,BRI3BP
+Function known but link to cell division not well established,C4orf46
+Function known but link to cell division not well established,CIP2A
+Function known but link to cell division not well established,DLEU1
+Function known but link to cell division not well established,DLEU2
+Function known but link to cell division not well established,DARS2
+Function known but link to cell division not well established,FARSB
+Function known but link to cell division not well established,RPL39L
+Function known but link to cell division not well established,ALG10
+Function known but link to cell division not well established,CCT6A
+Function known but link to cell division not well established,FN3KRP
+Function known but link to cell division not well established,MANEA
+Function known but link to cell division not well established,SEPHS1
+Function known but link to cell division not well established,TMPRSS11B
+Function known but link to cell division not well established,UBR7
+Function known but link to cell division not well established,CCT2
+Function known but link to cell division not well established,CCT4
+Function known but link to cell division not well established,CCT5
+Function known but link to cell division not well established,LYRM7
+Function known but link to cell division not well established,DCAF15
+Function known but link to cell division not well established,G2E3
+Function known but link to cell division not well established,LRR1
+Function known but link to cell division not well established,RNF26
+Function known but link to cell division not well established,RNF5
+Function known but link to cell division not well established,UBE2G1
+Function known but link to cell division not well established,UCHL5
+Function known but link to cell division not well established,ZYG11A
+Function known but link to cell division not well established,CAPRIN1
+Function known but link to cell division not well established,CPSF3
+Function known but link to cell division not well established,DHX9
+Function known but link to cell division not well established,ERI1
+Function known but link to cell division not well established,EXOSC5
+Function known but link to cell division not well established,EXOSC8
+Function known but link to cell division not well established,HNRNPAB
+Function known but link to cell division not well established,HNRNPF
+Function known but link to cell division not well established,HNRNPL
+Function known but link to cell division not well established,LSM2
+Function known but link to cell division not well established,LSM3
+Function known but link to cell division not well established,LSM4
+Function known but link to cell division not well established,POLR2D
+Function known but link to cell division not well established,POP7
+Function known but link to cell division not well established,PPIH
+Function known but link to cell division not well established,RPP30
+Function known but link to cell division not well established,SAP130
+Function known but link to cell division not well established,THOC3
+Function known but link to cell division not well established,ANP32A
+Function known but link to cell division not well established,ARHGAP11B
+Function known but link to cell division not well established,ARHGAP19
+Function known but link to cell division not well established,CAMK4
+Function known but link to cell division not well established,CDKN2AIPNL
+Function known but link to cell division not well established,CMAHP
+Function known but link to cell division not well established,IQGAP3
+Function known but link to cell division not well established,PAQR4
+Function known but link to cell division not well established,PDE6D
+Function known but link to cell division not well established,PIGU
+Function known but link to cell division not well established,PPP2R5D
+Function known but link to cell division not well established,SHCBP1
+Function known but link to cell division not well established,TRAIP
+Function known but link to cell division not well established,TRIM59
+Function known but link to cell division not well established,COPS3
+Function known but link to cell division not well established,CDK16
+Function known but link to cell division not well established,PHF7
+Function known but link to cell division not well established,SPATA5
+Function known but link to cell division not well established,DEPDC1
+Function known but link to cell division not well established,HLTF
+Function known but link to cell division not well established,HNRNPD
+Function known but link to cell division not well established,MXD3
+Function known but link to cell division not well established,MYEF2
+Function known but link to cell division not well established,NIF3L1
+Function known but link to cell division not well established,NR2C2AP
+Function known but link to cell division not well established,POLR3K
+Function known but link to cell division not well established,PSIP1
+Function known but link to cell division not well established,RTTN
+Function known but link to cell division not well established,SCML2
+Function known but link to cell division not well established,ZIK1
+Function known but link to cell division not well established,ZNF138
+Function known but link to cell division not well established,ZNF850
+Function known but link to cell division not well established,ZNF93
+Function known but link to cell division not well established,ARL6IP6
+Function known but link to cell division not well established,CSE1L
+Function known but link to cell division not well established,FOXRED1
+Function known but link to cell division not well established,GLE1
+Function known but link to cell division not well established,GPN3
+Function known but link to cell division not well established,HSPB11
+Function known but link to cell division not well established,IPO11
+Function known but link to cell division not well established,IPO4
+Function known but link to cell division not well established,IPO5
+Function known but link to cell division not well established,IPO9
+Function known but link to cell division not well established,KCNQ5
+Function known but link to cell division not well established,KPNA2
+Function known but link to cell division not well established,KPNA3
+Function known but link to cell division not well established,RANBP1
+Function known but link to cell division not well established,RANBP6
+Function known but link to cell division not well established,RANGAP1
+Function known but link to cell division not well established,SLC19A1
+Function known but link to cell division not well established,SLC25A10
+Function known but link to cell division not well established,SLC25A11
+Function known but link to cell division not well established,SLC25A40
+Function known but link to cell division not well established,SLC38A5
+Function known but link to cell division not well established,TNPO2
+Function known but link to cell division not well established,XPO1
+Uncharacterized,C17orf53
+Uncharacterized,C18orf54
+Uncharacterized,C19orf48
+Uncharacterized,C1orf112
+Uncharacterized,C3orf14
+Uncharacterized,C5orf34
+Uncharacterized,C9orf40
+Uncharacterized,CCDC138
+Uncharacterized,CCDC15
+Uncharacterized,CCDC150
+Uncharacterized,CCDC18
+Uncharacterized,CCDC34
+Uncharacterized,CCDC77
+Uncharacterized,EMC3-AS1
+Uncharacterized,ERI2
+Uncharacterized,FAM111B
+Uncharacterized,FAM122B
+Uncharacterized,FAM72B
+Uncharacterized,GSTCD
+Uncharacterized,HMGN2P5
+Uncharacterized,HYLS1
+Uncharacterized,KIAA1841
+Uncharacterized,MPHOSPH9
+Uncharacterized,NEMP1
+Uncharacterized,NEMP2
+Uncharacterized,NRM
+Uncharacterized,RIBC2
+Uncharacterized,SAAL1
+Uncharacterized,SPIN4
+Uncharacterized,TBC1D31
+Uncharacterized,TCEANC2
+Uncharacterized,THAP10
+Uncharacterized,TMEM106C
+Uncharacterized,TMEM209
+Uncharacterized,UBALD2
+Uncharacterized,WDR54
+Uncharacterized,WDR76
+Uncharacterized,ZMYM1
+Uncharacterized,ZNF100
+Uncharacterized,ZNF107
+Uncharacterized,ZNF184
+Uncharacterized,ZNF273
+Uncharacterized,ZNF367
+Uncharacterized,ZNF43
+Uncharacterized,ZNF681
+Uncharacterized,ZNF695
+Uncharacterized,ZNF714
+Uncharacterized,ZNF724
+Uncharacterized,ZNF730
+Uncharacterized,ZNF738
+Uncharacterized,ZNF788
+Uncharacterized,ZNF826P
+Uncharacterized,ZNF85
+Uncharacterized,ZNF90
