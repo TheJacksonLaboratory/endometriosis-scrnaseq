@@ -24,10 +24,16 @@ from skimage import morphology
 from skimage import exposure
 
 
+_curr_loc = Path(__file__).parent
+SPILLMAT_CSV = (_curr_loc / ".." / ".." / "databases" / "spillover.csv").resolve()
+#SPILLMAT_CSV = Path("/projects/robson-lab/research/imc/data/spillover.csv")
+
+
 def cross_dist(u, v, w=None):
     if w is None:
         w = np.zeros_like(u)
     return np.sign(np.cross(u - w, v - w))
+
 
 def close_contour(contour, xmax, ymax):
     if len(contour) < 5:
@@ -48,6 +54,7 @@ def close_contour(contour, xmax, ymax):
         corners[crosses < 0]
     ))
 
+
 def get_img_by_key(adata, by):
     n_obs = adata.shape[0]
     shape = adata.obsm["X_spatial"].max(axis=0)[::-1].astype(int) + 1
@@ -55,6 +62,7 @@ def get_img_by_key(adata, by):
         shape = adata.obsm["X_spatial_lowres"].max(axis=0)[::-1].astype(int) + 1
     img = adata.obs[by].values.reshape(shape)
     return img
+
 
 def paint_tissue(adata, by="log1p_total_intensity", key_added="in_tissue"):
     img = get_img_by_key(adata, by)
@@ -68,6 +76,7 @@ def paint_tissue(adata, by="log1p_total_intensity", key_added="in_tissue"):
     
     adata.obs[key_added] = mask.ravel()
     adata.obs[key_added] = adata.obs[key_added].astype("category")
+
     
 def paint_tissue_fast(adata, by="log1p_total_intensity", key_added_in="in_tissue", key_added_out="background", sigma=3, threshold=0.3):
     img = get_img_by_key(adata, by)
@@ -86,9 +95,6 @@ def paint_tissue_fast(adata, by="log1p_total_intensity", key_added_in="in_tissue
     )
     adata.obs[key_added_in] = mask.ravel().astype(int)
     adata.obs[key_added_out] = (~mask.ravel()).astype(int)
-
-
-SPILLMAT_CSV = Path("/projects/robson-lab/research/imc/data/spillover.csv")
 
 
 def shape_from_xy(arr):
